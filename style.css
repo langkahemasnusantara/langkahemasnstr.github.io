@@ -20,33 +20,35 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* Perbaikan Navigasi agar tidak acak-acakan di HP */
+/* Navigasi Responsif */
 nav {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 10px 5%; background: rgba(0,0,0,0.6); backdrop-filter: blur(10px);
+    padding: 10px 5%; background: rgba(0,0,0,0.7); backdrop-filter: blur(10px);
     position: fixed; width: 100%; top: 0; z-index: 1000;
 }
 
-.nav-logo { width: 40px; border-radius: 50%; border: 1px solid var(--gold); }
-.logo-text { color: var(--gold); font-weight: 700; font-size: 1.1rem; margin-left: 8px; }
+.nav-logo { width: 35px; border-radius: 50%; border: 1px solid var(--gold); }
+.logo-text { color: var(--gold); font-weight: 700; font-size: 1rem; margin-left: 5px; }
 
-.nav-links { display: flex; list-style: none; gap: 15px; }
-.nav-links a { color: var(--white); text-decoration: none; font-size: 0.8rem; font-weight: 600; }
+.nav-links { display: flex; list-style: none; gap: 10px; }
+.nav-links a { color: var(--white); text-decoration: none; font-size: 0.75rem; font-weight: 600; }
 
-/* Perbaikan Hero Section & Tombol */
+/* Hero Section & Tombol (Anti-Tumpuk) */
 .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; }
-.hero h1 { font-size: 2.5rem; color: var(--gold); margin-bottom: 10px; }
+.hero h1 { font-size: 2.2rem; color: var(--gold); margin-bottom: 10px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
 
 .hero-btns { 
     display: flex; 
-    flex-direction: column; /* Tombol berbaris vertikal di HP agar tidak tumpuk */
+    flex-direction: column; 
     gap: 15px; 
     align-items: center; 
     margin-top: 20px;
+    width: 100%;
 }
 
 .btn {
-    width: 200px; /* Lebar tetap agar rapi */
+    width: 80%; /* Menyesuaikan layar HP */
+    max-width: 250px;
     padding: 12px;
     background: var(--gold);
     color: var(--maroon);
@@ -54,29 +56,29 @@ nav {
     border-radius: 50px;
     font-weight: 700;
     text-align: center;
+    transition: 0.3s;
 }
 
 .btn-outline { background: transparent; color: var(--gold); border: 2px solid var(--gold); }
 
-/* Konten Lengkap */
-.section { padding: 80px 8% 40px; }
-h2 { text-align: center; color: var(--gold); margin-bottom: 30px; }
+/* Konten Box */
+.section { padding: 100px 5% 40px; }
+h2 { text-align: center; color: var(--gold); margin-bottom: 25px; font-size: 1.8rem; }
 
 .content-box, .glass-card, .program-detail {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.07);
     padding: 20px;
     border-radius: 15px;
-    border: 1px solid rgba(255,215,0,0.1);
+    border: 1px solid rgba(255,215,0,0.15);
     margin-bottom: 20px;
 }
 
-.program-detail h3 { color: var(--gold); margin-bottom: 10px; }
-
-footer { text-align: center; padding: 20px; font-size: 0.8rem; background: rgba(0,0,0,0.5); }
-
-/* Penyesuaian untuk Layar Lebih Lebar */
+/* Responsif Layar Lebar */
 @media (min-width: 768px) {
     .hero h1 { font-size: 4rem; }
     .hero-btns { flex-direction: row; justify-content: center; }
+    .nav-links { gap: 25px; }
     .nav-links a { font-size: 1rem; }
+    .logo-text { font-size: 1.4rem; }
+    .nav-logo { width: 45px; }
 }
