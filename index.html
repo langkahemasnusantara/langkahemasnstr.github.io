@@ -4,118 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LENTRA - Langkah Emas Nusantara</title>
-    
-    <!-- Memanggil Desain Merah Marun & Emas -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Memanggil Icon Profesional -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="quality_restoration_20260503110520530.jpg">
 </head>
 <body>
 
-    <!-- NAVIGASI UTAMA -->
-    <nav id="navbar">
+    <nav>
         <div class="logo-container">
             <img src="quality_restoration_20260503110520530.jpg" alt="Logo LENTRA" class="nav-logo">
             <span class="logo-text">LENTRA</span>
         </div>
         <ul class="nav-links">
-            <li><a href="#home">Beranda</a></li>
-            <li><a href="#about">Tentang</a></li>
-            <li><a href="#programs">Program</a></li>
-            <li><a href="#contact">Kontak</a></li>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#tentang">Profil</a></li>
+            <li><a href="#misi">Visi & Misi</a></li>
+            <li><a href="#program">Program</a></li>
+            <li><a href="#kontak">Kontak</a></li>
         </ul>
     </nav>
 
-    <!-- BAGIAN UTAMA (HERO) -->
-    <header id="home" class="hero">
+    <header id="beranda" class="hero">
         <div class="hero-content">
             <h1>Langkah Emas Nusantara</h1>
-            <p>"Melangkah Bersama Tak Terbatas"</p>
-            <a href="#programs" class="btn">Lihat Gerakan Kami</a>
+            <p class="tagline">"Melangkah Bersama Tak Terbatas"</p>
+            <div class="hero-btns">
+                <a href="#tentang" class="btn">Kenali LENTRA</a>
+                <a href="#program" class="btn btn-outline">Aksi Nyata</a>
+            </div>
         </div>
     </header>
 
-    <!-- VISI & MISI -->
-    <section id="about" class="section">
-        <h2>Visi Peradaban</h2>
-        <p class="visi">"Menjadi episentrum pergerakan pemuda Indonesia yang transformatif dalam mewujudkan peradaban bangsa yang cerdas, berdaya, dan humanis menuju Indonesia Emas 2045."</p>
-        
-        <div class="founder-info">
-            <p>Didirikan di <strong>Kabupaten Tasikmalaya</strong> pada 6 Maret 2026 oleh Dicki Chandra dan rekan-rekan.</p>
+    <section id="tentang" class="section">
+        <div class="container">
+            <h2>Definisi Organisasi</h2>
+            <p class="desc"><strong>LENTRA (Langkah Emas Nusantara)</strong> adalah gerakan aksi pendidikan dan kemanusiaan yang menjadi wadah transformasi pemuda dalam mewujudkan visi <strong>Indonesia Emas 2045</strong>. Didirikan pada <strong>6 Maret 2026</strong> di <strong>Kabupaten Tasikmalaya</strong>, gerakan ini dipelopori oleh <strong>Dicki Chandra</strong> bersama tujuh rekan lainnya sebagai upaya kolektif membangun peradaban bangsa yang cerdas dan berdaya.</p>
         </div>
     </section>
 
-    <!-- PROGRAM KERJA (GALERI AKSI) -->
-    <section id="programs" class="section bg-light">
-        <h2>Program Kerja Utama</h2>
-        <div class="misi-grid">
-            
-            <!-- Pilar Pendidikan -->
-            <div class="misi-card">
-                <div class="card-img">
-                    <img src="IMG_1141.png" alt="Pendidikan LENTRA">
-                </div>
-                <i class="fas fa-graduation-cap"></i>
-                <h3>Nusantara Future Skills Hub</h3>
-                <p>Akselerasi pendidikan inklusif dan pelatihan digital bagi pemuda di pelosok desa.</p>
+    <section id="misi" class="section glass-bg">
+        <div class="container">
+            <h2>Visi & Misi</h2>
+            <div class="visi-box">
+                <h3>Visi</h3>
+                <p>"Menjadi episentrum pergerakan pemuda Indonesia yang transformatif dalam mewujudkan peradaban bangsa yang cerdas, berdaya, dan humanis menuju Indonesia Emas 2045."</p>
             </div>
-
-            <!-- Pilar Kemanusiaan -->
-            <div class="misi-card">
-                <div class="card-img">
-                    <img src="IMG_1142.png" alt="Kemanusiaan LENTRA">
+            <div class="misi-grid-list">
+                <div class="misi-item">
+                    <i class="fas fa-bullseye"></i>
+                    <p>Membangun ekosistem pendidikan inklusif untuk memperkecil kesenjangan akses ilmu pengetahuan di pelosok Nusantara.</p>
                 </div>
-                <i class="fas fa-hands-helping"></i>
-                <h3>Ekspedisi Merangkul Masa</h3>
-                <p>Aksi nyata kemanusiaan untuk ODGJ, anak yatim di panti asuhan, dan masyarakat jalanan.</p>
-            </div>
-
-            <!-- Pilar Kepemimpinan -->
-            <div class="misi-card">
-                <div class="card-img">
-                    <img src="IMG_1143.png" alt="Kepemimpinan LENTRA">
+                <div class="misi-item">
+                    <i class="fas fa-heart"></i>
+                    <p>Melaksanakan aksi kemanusiaan tanpa batas bagi kelompok marginal, termasuk ODGJ dan anak-anak panti asuhan.</p>
                 </div>
-                <i class="fas fa-users-cog"></i>
-                <h3>Golden Indonesia Leadership</h3>
-                <p>Wadah inkubasi kepemimpinan untuk mencetak pemuda yang berintegritas dan visioner.</p>
+                <div class="misi-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Menciptakan wadah inovasi dan kepemimpinan bagi pemuda untuk kemandirian ekonomi desa.</p>
+                </div>
             </div>
-
         </div>
     </section>
 
-    <!-- SEKILAS DOKUMENTASI -->
-    <section class="section">
-        <h2>Dokumentasi Aksi</h2>
-        <div class="gallery-grid">
-            <img src="IMG_1144.png" alt="Aksi 1">
-            <img src="IMG_1145.png" alt="Aksi 2">
-            <img src="IMG_1146.png" alt="Aksi 3">
+    <section id="program" class="section">
+        <div class="container">
+            <h2>Pilar Program Kerja</h2>
+            <div class="program-grid">
+                <div class="program-card">
+                    <img src="IMG_1141.png" alt="Pendidikan">
+                    <h3>Nusantara Future Skills Hub</h3>
+                    <p>Akselerasi literasi digital dan beasiswa "Langkah Kecil" untuk pemuda berprestasi.</p>
+                </div>
+                <div class="program-card">
+                    <img src="IMG_1142.png" alt="Kemanusiaan">
+                    <h3>Ekspedisi Merangkul Masa</h3>
+                    <p>Kunjungan rutin dan rehabilitasi martabat bagi penyandang gangguan jiwa (ODGJ) serta pemberdayaan masyarakat jalanan.</p>
+                </div>
+                <div class="program-card">
+                    <img src="IMG_1143.png" alt="Kepemimpinan">
+                    <h3>Leadership & Ekonomi</h3>
+                    <p>Inkubasi UMKM pemuda desa dan laboratorium kepemimpinan nasional.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- FOOTER & KONTAK -->
-    <footer id="contact">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="quality_restoration_20260503110520530.jpg" alt="Logo">
+    <footer id="kontak">
+        <div class="footer-grid">
+            <div class="footer-about">
                 <h3>LENTRA</h3>
+                <p>Membangun langkah kecil untuk dampak besar bagi Nusantara.</p>
             </div>
-            <div class="footer-links">
+            <div class="footer-contact">
                 <p><i class="fas fa-envelope"></i> langkahemasnusantara@gmail.com</p>
                 <div class="socials">
-                    <a href="https://instagram.com/langkahemas.nstr"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-tiktok"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
         </div>
-        <div class="bottom-bar">
-            <p>&copy; 2026 Langkah Emas Nusantara. Melangkah Bersama Tak Terbatas.</p>
-        </div>
+        <p class="copyright">&copy; 2026 Langkah Emas Nusantara. Didirikan di Tasikmalaya.</p>
     </footer>
 
-    <!-- MEMANGGIL ANIMASI INTERAKTIF -->
     <script src="script.js"></script>
 </body>
 </html>
