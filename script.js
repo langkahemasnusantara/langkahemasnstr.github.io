@@ -1,42 +1,43 @@
-// 1. Efek Navigasi Transparan ke Solid saat Scroll
+// Navigasi Berubah Warna Saat Scroll
 window.addEventListener('scroll', function() {
     const nav = document.querySelector('nav');
     if (window.scrollY > 50) {
-        nav.classList.add('nav-active');
+        nav.style.background = 'rgba(74, 0, 0, 0.95)'; // Merah Marun Pekat
+        nav.style.boxShadow = '0 5px 20px rgba(0,0,0,0.5)';
     } else {
-        nav.classList.remove('nav-active');
+        nav.style.background = 'rgba(0, 0, 0, 0.4)';
+        nav.style.boxShadow = 'none';
     }
 });
 
-// 2. Smooth Scrolling untuk Menu Navigasi
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const sectionId = this.getAttribute('href');
-        document.querySelector(sectionId).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-// 3. Efek Muncul (Reveal) saat Scroll untuk Program Kerja
-// Cocok untuk menampilkan pilar Pendidikan & Kemanusiaan secara dramatis
+// Animasi Muncul Saat Scroll (Scroll Reveal)
 const observerOptions = {
-    threshold: 0.2
+    threshold: 0.1
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('reveal-visible');
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
         }
     });
 }, observerOptions);
 
-document.querySelectorAll('.misi-card').forEach(card => {
-    observer.observe(card);
+// Menerapkan animasi pada kartu dan section
+document.querySelectorAll('.program-card, .misi-item, .section h2').forEach((el) => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(30px)";
+    el.style.transition = "all 0.8s ease-out";
+    observer.observe(el);
 });
 
-// 4. Pesan Sambutan Otomatis di Konsol Browser
-console.log("Selamat Datang di Website LENTRA - Langkah Emas Nusantara");
-console.log("Mewujudkan Indonesia Emas 2045 melalui aksi nyata pemuda.");
+// Smooth Scroll untuk Link Navigasi
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
