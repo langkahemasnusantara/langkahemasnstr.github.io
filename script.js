@@ -1,20 +1,11 @@
-// Navigasi Berubah Warna Saat Scroll
-window.addEventListener('scroll', function() {
+// Navigasi Berubah Warna
+window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
-    if (window.scrollY > 50) {
-        nav.style.background = 'rgba(74, 0, 0, 0.95)'; // Merah Marun Pekat
-        nav.style.boxShadow = '0 5px 20px rgba(0,0,0,0.5)';
-    } else {
-        nav.style.background = 'rgba(0, 0, 0, 0.4)';
-        nav.style.boxShadow = 'none';
-    }
+    nav.style.background = window.scrollY > 50 ? 'rgba(74, 0, 0, 0.95)' : 'rgba(0, 0, 0, 0.7)';
 });
 
-// Animasi Muncul Saat Scroll (Scroll Reveal)
-const observerOptions = {
-    threshold: 0.1
-};
-
+// Efek Muncul Saat Scroll
+const revealElements = document.querySelectorAll('.glass-card, .program-detail, .content-box');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -22,22 +13,11 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.style.transform = "translateY(0)";
         }
     });
-}, observerOptions);
+}, { threshold: 0.1 });
 
-// Menerapkan animasi pada kartu dan section
-document.querySelectorAll('.program-card, .misi-item, .section h2').forEach((el) => {
+revealElements.forEach(el => {
     el.style.opacity = "0";
     el.style.transform = "translateY(30px)";
-    el.style.transition = "all 0.8s ease-out";
+    el.style.transition = "0.8s ease-out";
     observer.observe(el);
-});
-
-// Smooth Scroll untuk Link Navigasi
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
 });
